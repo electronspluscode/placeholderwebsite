@@ -6,7 +6,7 @@ const Index = () => {
     <div className="min-h-screen relative overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('/lovable-uploads/1c182099-f5d5-4800-90d2-8b45491a518d.png')`
         }}
@@ -19,11 +19,8 @@ const Index = () => {
       <div className="relative z-10 min-h-screen flex items-center justify-center p-8">
         <div className="text-center max-w-2xl mx-auto">
           {/* Name */}
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
-            Nathaniel
-            <span className="block text-white/90 text-5xl md:text-7xl mt-2">
-              Nichol
-            </span>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+            Nathaniel Nichol
           </h1>
           
           {/* Coming Soon Text */}
