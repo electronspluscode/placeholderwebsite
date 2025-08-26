@@ -1,11 +1,54 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/1c182099-f5d5-4800-90d2-8b45491a518d.png')`
+        }}
+      />
+      
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-overlay" />
+      
+      {/* Content */}
+      <div className="relative z-10 min-h-screen flex items-center justify-center p-8">
+        <div className="text-center max-w-2xl mx-auto">
+          {/* Name */}
+          <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
+            Nathaniel
+            <span className="block text-white/90 text-5xl md:text-7xl mt-2">
+              Nichol
+            </span>
+          </h1>
+          
+          {/* Coming Soon Text */}
+          <p className="text-xl md:text-2xl text-white/90 mb-12 font-light tracking-wide">
+            More Information Coming Soon
+          </p>
+          
+          {/* LinkedIn Button */}
+          <a
+            href="https://www.linkedin.com/in/nathanielnichol/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <Button variant="hero" size="lg" className="text-lg px-8 py-6 group">
+              <span>Connect on LinkedIn</span>
+              <ExternalLink className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </a>
+        </div>
+      </div>
+      
+      {/* Subtle decoration */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="w-1 h-12 bg-white/30 rounded-full animate-pulse" />
       </div>
     </div>
   );
